@@ -14,7 +14,7 @@
   
 
   # Câu A2 
-    *Lỗi 1: 
+    Lỗi 1: 
         Dùng <div class="header"> thay vì <header>
 
     Sai:
@@ -25,8 +25,8 @@
 
         <header>
 
-    Vì: header giúp máy tìm kiếm nhận biết đây là phần đầu trang.*
-    *Lỗi 2:
+    Vì: header giúp máy tìm kiếm nhận biết đây là phần đầu trang.
+    Lỗi 2:
         Menu không dùng thẻ <nav>
 
         Menu hiện tại:
@@ -43,8 +43,8 @@
                     <li><a href="/">Trang chủ</a></li>
                     <li><a href="/products">Sản phẩm</a></li>
                 </ul>
-            </nav>*
-        *Lỗi 3: 
+            </nav>
+        Lỗi 3: 
             Ảnh thiếu thuộc tính alt
             Sai:
                 <img src="iphone.jpg">
@@ -52,12 +52,34 @@
             Sửa:
                 <img src="iphone.jpg" alt="iPhone 16 Pro">
 
-            Lý do: Google đọc alt để hiểu ảnh.*
-        *Lỗi 4:
+            Lý do: Google đọc alt để hiểu ảnh.
+        Lỗi 4:
             Footer dùng div thay vì <footer>
                 Sai:
                     <div class="footer">
                 Sửa:
                     <footer>
 # Câu A3
+    Kết quả:
+    Hộp 1
+    Text A Text B
+    Hộp 2
+    Text C Text D
+    Hộp 3
+    Giải thích:
+        <div> là block → chiếm cả dòng, tự xuống dòng.
+        <span> và <strong> là inline → nằm cùng một dòng.
+    Vì vậy:
+        Hộp 1, Hộp 2, Hộp 3 mỗi cái một dòng riêng.
+        Text A Text B cùng dòng.
+        Text C Text D cùng dòng (strong chỉ in đậm, vẫn là inline).
 
+# Câu A4
+    **thead**: chứa phần tiêu đề của bảng (tên cột).
+    **tbody**: chứa dữ liệu chính của bảng.
+    **tfoot**: chứa phần cuối bảng, thường dùng tổng kết/tổng cộng.
+    Không nên dùng table để tạo layout vì:
+1. Sai semantic: table dành cho dữ liệu dạng bảng, không phải bố cục trang.
+2. SEO và accessibility kém: công cụ tìm kiếm và trình đọc màn hình khó hiểu cấu trúc trang.
+3. Khó responsive: khó thiết kế phù hợp mobile hơn Flexbox/Grid.
+4. Khó bảo trì: code rối, khó chỉnh sửa.
