@@ -85,3 +85,24 @@
 2. SEO và accessibility kém: công cụ tìm kiếm và trình đọc màn hình khó hiểu cấu trúc trang.
 3. Khó responsive: khó thiết kế phù hợp mobile hơn Flexbox/Grid.
 4. Khó bảo trì: code rối, khó chỉnh sửa.
+
+# Câu B3
+Lỗi 1: Dòng 1 — <!DOCTYPE> sai cú pháp — sửa thành <!DOCTYPE html>
+
+Lỗi 2: Dòng 2 — thiếu thuộc tính lang trong thẻ html — sửa thành <html lang="vi">
+
+Lỗi 3: Dòng 5 — thẻ title chưa đóng — thêm </title>
+
+Lỗi 4: Dòng 6 — meta charset viết utf8 sai chuẩn — sửa thành UTF-8
+
+Lỗi 5: Dòng 9 — thẻ h1 đóng sai — <h1> ... </h1>
+
+Lỗi 6: Dòng 13 — thẻ a đầu tiên chưa đóng — thêm </a>
+
+Lỗi 7: Dòng 21 — img thiếu dấu ngoặc kép và thiếu alt — sửa: <img src="iphone.jpg" alt="iPhone 16 Pro">
+
+Lỗi 8: Dòng 23 — thẻ b đóng sai thứ tự — đổi thành: <strong>25.990.000đ</strong>
+
+Lỗi 9: Dòng 28-35 — hàng tiêu đề bảng dùng td thay vì th, thiếu thead và tbody — bổ sung cấu trúc bảng đúng semantic
+
+Lỗi 10: Dòng 43 — thẻ p trong footer chưa đóng — thêm </p>
