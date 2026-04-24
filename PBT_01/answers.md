@@ -10,7 +10,9 @@
 
 >*Phần 2*
 
-  *Trong tab Network của Google Chrome DevTools, bạn có thể theo dõi toàn bộ các request/response giữa trình duyệt và server khi tải hoặc tương tác với một trang web.*
+    Trong tab Network của Google Chrome DevTools, bạn có thể theo dõi toàn bộ các request/response giữa trình duyệt và server khi tải hoặc tương tác với một trang web.
+
+![Ảnh mẫu](screenshots/screenshot.png)
   
 
   # Câu A2 
@@ -75,9 +77,9 @@
         Text C Text D cùng dòng (strong chỉ in đậm, vẫn là inline).
 
 # Câu A4
-    **thead**: chứa phần tiêu đề của bảng (tên cột).
-    **tbody**: chứa dữ liệu chính của bảng.
-    **tfoot**: chứa phần cuối bảng, thường dùng tổng kết/tổng cộng.
+    thead: chứa phần tiêu đề của bảng (tên cột).
+    tbody: chứa dữ liệu chính của bảng.
+    tfoot: chứa phần cuối bảng, thường dùng tổng kết/tổng cộng.
     Không nên dùng table để tạo layout vì:
 1. Sai semantic: table dành cho dữ liệu dạng bảng, không phải bố cục trang.
 2. SEO và accessibility kém: công cụ tìm kiếm và trình đọc màn hình khó hiểu cấu trúc trang.
