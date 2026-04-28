@@ -106,3 +106,10 @@ Lỗi 8: Dòng 23 — thẻ b đóng sai thứ tự — đổi thành: <strong>2
 Lỗi 9: Dòng 28-35 — hàng tiêu đề bảng dùng td thay vì th, thiếu thead và tbody — bổ sung cấu trúc bảng đúng semantic
 
 Lỗi 10: Dòng 43 — thẻ p trong footer chưa đóng — thêm </p>
+
+# Câu B4
+
+![Ảnh phần 4.1](screenshots/AnhbaiB4(1).png)
+![Ảnh phần 4.3](screenshots/Anhbai4(2).png)
+
+# Câu C1

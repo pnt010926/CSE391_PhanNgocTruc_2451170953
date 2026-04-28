@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- Khai báo tài liệu HTML5 -->
+<html lang="vi">
+<!-- Xác định ngôn ngữ tiếng Việt -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Hỗ trợ ký tự Unicode -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive cho mobile -->
+    <title>Chi tiết sản phẩm</title>
+    <!-- Tiêu đề trang -->
+</head>
+
+<body>
+
+    <!-- HEADER: phần đầu trang -->
+    <header>
+        <!-- header dùng cho khu vực đầu, chứa logo + menu -->
+        <div class="logo">Logo</div>
+        <!-- div dùng để chứa logo (layout) -->
+
+        <nav>
+            <!-- nav dùng cho menu điều hướng chính -->
+            <ul>
+                <!-- ul vì menu là danh sách -->
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Danh mục</a></li>
+                <li><a href="#">Khuyến mãi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN: nội dung chính -->
+    <main>
+        <!-- main giúp xác định nội dung trung tâm của trang -->
+
+        <section class="product-detail">
+            <!-- section nhóm toàn bộ nội dung sản phẩm -->
+
+            <!-- ẢNH SẢN PHẨM -->
+            <div class="product-images">
+                <!-- div dùng để chia layout ảnh -->
+                <img src="#" alt="Ảnh sản phẩm 1">
+                <!-- img hiển thị ảnh -->
+                <img src="#" alt="Ảnh sản phẩm 2">
+                <img src="#" alt="Ảnh sản phẩm 3">
+                <img src="#" alt="Ảnh sản phẩm 4">
+                <img src="#" alt="Ảnh sản phẩm 5">
+            </div>
+
+            <!-- THÔNG TIN SẢN PHẨM -->
+            <article class="product-info">
+                <!-- article vì đây là nội dung độc lập (1 sản phẩm) -->
+
+                <h1>Tên sản phẩm</h1>
+                <!-- h1 là tiêu đề chính của trang -->
+
+                <p class="price">Giá sản phẩm</p>
+                <!-- p dùng cho text thông thường -->
+
+                <div class="rating">
+                    <!-- div nhóm phần đánh giá -->
+                    <span>★★★★★</span>
+                    <!-- span cho nội dung inline -->
+                </div>
+
+                <p class="description">
+                    Mô tả sản phẩm
+                </p>
+            </article>
+
+        </section>
+
+        <!-- THÔNG SỐ KỸ THUẬT -->
+        <section class="specifications">
+            <!-- section cho nội dung riêng biệt -->
+            <h2>Thông số kỹ thuật</h2>
+
+            <table>
+                <!-- table để hiển thị dữ liệu dạng bảng -->
+                <thead>
+                    <!-- tiêu đề bảng -->
+                    <tr>
+                        <th>Thuộc tính</th>
+                        <th>Giá trị</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- dữ liệu bảng -->
+                    <tr>
+                        <td>RAM</td>
+                        <td>8GB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ĐÁNH GIÁ -->
+        <section class="reviews">
+            <!-- section chứa bình luận -->
+            <h2>Đánh giá & Bình luận</h2>
+
+            <article class="review">
+                <!-- mỗi review là 1 nội dung độc lập -->
+                <p><strong>Người dùng A</strong></p>
+                <p>Sản phẩm rất tốt</p>
+            </article>
+
+            <form>
+                <!-- form để người dùng nhập bình luận -->
+                <textarea placeholder="Nhập bình luận"></textarea>
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside>
+        <!-- aside cho nội dung phụ (sản phẩm tương tự) -->
+        <h2>Sản phẩm tương tự</h2>
+
+        <ul>
+            <!-- danh sách sản phẩm -->
+            <li>Sản phẩm 1</li>
+            <li>Sản phẩm 2</li>
+        </ul>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- footer chứa thông tin cuối trang -->
+        <p>© 2026 Công ty</p>
+    </footer>
+
+</body>
+
+</html>
