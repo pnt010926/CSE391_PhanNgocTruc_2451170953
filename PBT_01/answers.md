@@ -112,4 +112,4 @@ Lỗi 10: Dòng 43 — thẻ p trong footer chưa đóng — thêm </p>
 ![Ảnh phần 4.1](screenshots/AnhbaiB4(1).png)
 ![Ảnh phần 4.3](screenshots/Anhbai4(2).png)
 
-# Câu C1
+# Câu C2
