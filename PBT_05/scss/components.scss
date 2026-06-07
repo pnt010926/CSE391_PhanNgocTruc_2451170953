@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: $background-light;
+    font-family: $font-primary;
+}
+
+.header {
+    background: $secondary-color;
+    color: $text-light;
+    padding: $spacing-md;
+    @include flex-center;
+    h1 {
+        margin: 0;
+    }
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    padding: $spacing-lg;
+    @include respond-to(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond-to(desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    background: white;
+    border-radius: $border-radius;
+    overflow: hidden;
+    @include card-shadow;
+    transition: 0.3s;
+    .card-image {
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+    .card-content {
+        padding: $spacing-md;
+    }
+    .card-title {
+        font-size: 20px;
+        margin-bottom: $spacing-sm;
+        color: $text-dark;
+    }
+    .card-price {
+        color: $primary-color;
+        font-weight: bold;
+        margin-bottom: $spacing-md;
+    }
+    button {
+        width: 100%;
+        padding: $spacing-sm;
+        border: none;
+        background: $primary-color;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    &.featured {
+        border: 3px solid gold;
+    }
+}

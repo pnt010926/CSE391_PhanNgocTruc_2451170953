@@ -126,3 +126,49 @@ Ví dụ SCSS
 Tại sao trình duyệt KHÔNG đọc được .scss?
 Vì .scss là ngôn ngữ mở rộng của CSS, không phải CSS thuần nên browser không thể chạy trực tiếp file .scss.
 Để chuyển scss sang css ta cần phải biên dịch lại chúng.
+```
+# Câu B3
+
+```bash
+sass scss/style.scss css/style.css
+```
+# Câu C1
+**375px**
+Navigation thay đổi thế nào?
+    Navigation menu ngang bị ẩn
+    Hiện icon hamburger ☰
+    Giúp tiết kiệm không gian màn hình nhỏ
+Lưới content thay đổi mấy cột?
+    Product grid còn 1 cột
+Elements nào bị ẩn trên mobile?
+    Sidebar filter bị ẩn
+    Ads bar bị ẩn
+    Navigation menu ngang bị ẩn
+Font size có thay đổi không?
+    Font size nhỏ nhất
+    Phù hợp màn hình điện thoại
+**768px**
+Navigation thay đổi thế nào?
+    Hamburger bị ẩn
+    Navigation menu ngang xuất hiện
+Lưới content thay đổi mấy cột?
+    Product grid chuyển thành 2 cột
+Elements nào bị ẩn?
+    Sidebar xuất hiện lại
+    Ads bar vẫn ẩn
+Font size có thay đổi không?
+    Font lớn hơn mobile
+**1200px**
+Navigation thay đổi thế nào?
+    Navigation hiển thị đầy đủ dạng ngang
+    Hamburger không còn xuất hiện
+Lưới content thay đổi mấy cột?
+    Product grid thành 4 cột
+Elements nào hiển thị thêm?
+    Sidebar xuất hiện bên trái
+    Ads bar xuất hiện bên phải
+    Layout đầy đủ 3 cột
+Font size có thay đổi không?
+    Font lớn nhất
+    Khoảng cách và padding lớn hơn
+    Card title khoảng 22px
