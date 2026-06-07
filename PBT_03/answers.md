@@ -204,3 +204,12 @@ border: 5px solid black;
 Khác nhau ở thuộc tính box-sizing.
 Box 1 thuộc tính là content-box: width chỉ tính phần nội dung, nên padding và border làm hộp lớn hơn kích thước khai báo.
 Box 2 thuộc tính là border-box: width đã bao gồm content, padding và border, nên kích thước hộp luôn đúng bằng giá trị khai báo.
+
+# Câu B3
+
+Kết quả:
+Element hiển thị màu gold vì Rule 10 có specificity cao nhất (1,2,1).
+
+Nếu thay đổi thứ tự các rule:
+- Kết quả không đổi vì Rule 10 vẫn có specificity cao nhất.
+- Chỉ khi hai rule có cùng specificity thì rule viết sau sẽ được ưu tiên.
