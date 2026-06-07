@@ -213,3 +213,60 @@ Element hiển thị màu gold vì Rule 10 có specificity cao nhất (1,2,1).
 Nếu thay đổi thứ tự các rule:
 - Kết quả không đổi vì Rule 10 vẫn có specificity cao nhất.
 - Chỉ khi hai rule có cùng specificity thì rule viết sau sẽ được ưu tiên.
+
+# Câu C1
+1. Tính chiều rộng thực tế
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+Vì đang dùng content-box (mặc định):
+Chiều rộng thực tế của sidebar
+= width + padding trái + padding phải + border trái + border phải
+= 300 + 20 + 20 + 1 + 1
+= 342px
+Nên sidebar thực tế rộng 342px
+
+.content {
+    width: 660px;
+    padding: 30px;
+    border: 1px solid #ccc;
+}
+Chiều rộng thực tế của content
+= 660 + 30 + 30 + 1 + 1
+= 722px
+Nên content thực tế rộng 722px
+Tổng chiều rộng: 342 + 722 = 1064px
+Trong khi container chỉ có: 960px nên xảy 
+
+2. Giải thích tại sao layout bị vỡ
+Do đó trình duyệt không đủ chỗ để đặt hai phần tử trên cùng một hàng, vì tổng chiều rộng của container là 1064px vượt quá 960px
+Nên sidebar nằm hàng đầu, content bị đẩy xuống dòng mới, layout bị vỡ.
+3. Cách sửa
+Cách sửa số 1 (Dùng border-box). Vì:
+Khi dùng: box-sizing: border-box;
+
+Sidebar = 300px
+Content = 660px
+Tổng: 300 + 660 = 960px
+=> Vừa khít container.
+Cách sửa số 2 (Không dùng border-box)
+Giữ nguyên content-box nhưng giảm width.
+.sidebar {
+    width: 298px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+.content {
+    width: 658px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+}
+Tổng:
+300 + 660 = 960px
+=> Không bị xuống dòng.
