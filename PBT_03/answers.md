@@ -193,3 +193,14 @@ Nên màu sẽ là orange.
 Nếu Rule A thêm !important:
 p { color: black !important; } Màu sẽ là black.
 Vì !important ưu tiên vượt trên tất cả, bất kể specificity thấp hơn.
+
+# Câu B2.1
+Hộp 1 (content-box): chiều rộng thực tế = 300 + 20×2 + 5×2 = 350px
+Hộp 2 (border-box): chiều rộng thực tế = 300 - 20×2 - 5×2 = 250px
+Hai hộp đều có:
+width: 300px;
+padding: 20px;
+border: 5px solid black;
+Khác nhau ở thuộc tính box-sizing.
+Box 1 thuộc tính là content-box: width chỉ tính phần nội dung, nên padding và border làm hộp lớn hơn kích thước khai báo.
+Box 2 thuộc tính là border-box: width đã bao gồm content, padding và border, nên kích thước hộp luôn đúng bằng giá trị khai báo.
