@@ -58,3 +58,24 @@ Layout tạo ra 3 hàng 7 item, mỗi hàng tối đa chứa 3 item và khoảng
 | item1 | | item2 | | item3 |
 | item4 | | item5 | | item6 |
 | item7 |
+```
+# Câu C1
+Nếu navigation bar ngang (logo + menu + buttons) thì nên dùng flexbox vì flexbox giúp căn giữa tốt
+Nếu lưới ảnh Instagram (3 cột đều nhau, số ảnh không biết trước) nên dùng grid vì đây là layout 2 chiều và mình có thể dễ dàng chia thành 3 cột bằng nhau nhanh hơn 
+Nếu layout blog: main content + sidebar nên dùng grid vì có cấu trúc rõ ràng theo cột: content lớn + sidebar nhỏ. Grid kiểm soát bố cục tổng thể tốt hơn Flexbox.
+Nếu footer với 4 cột thông tin có thể dùng cả hai nếu chỉ cần các cột đều nhau thì dùng Grid dễ hơn. Nếu muốn các cột co giãn linh hoạt theo nội dung thì Flexbox cũng phù hợp.
+Nếu card sản phẩm (ảnh trên, text giữa, nút dưới — nút luôn dính đáy) thì dùng Flexbox vì card là layout theo chiều dọc thì dùng Flexbox auto để đẩy nút xuống đáy rất hiệu quả.
+
+# Câu C2
+Giải thích lỗi.
+Lỗi 1:
+Các card có lượng nội dung khác nhau:
+Card có tiêu đề ngắn nên chiều cao thấp.
+Card có tiêu đề dài nên chiều cao cao hơn.
+
+Nút .btn đang nằm ngay sau nội dung nên vị trí nút phụ thuộc vào độ dài text.
+Vì card không dùng Flexbox theo chiều dọc nên nút không thể tự dính xuống đáy card.
+Lỗi 2:
+Content vẫn dính góc trái trên vì display: flex chỉ kích hoạt Flexbox nhưng chưa căn chỉnh vị trí item.
+Lỗi 3:
+Trong flexbox các item mặc định có thể tự co nhỏ khi không đủ không gian.
