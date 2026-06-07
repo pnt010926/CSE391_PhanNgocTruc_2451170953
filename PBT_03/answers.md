@@ -270,3 +270,26 @@ Giữ nguyên content-box nhưng giảm width.
 Tổng:
 300 + 660 = 960px
 => Không bị xuống dòng.
+# Câu C2
+"Sản phẩm A" (h2) có font-size = 20px và color = green
+"Mô tả sản phẩm" (p trong card featured) có color = blue
+"Sản phẩm B" (h2) có font-size = 20px và color = blue
+"Mô tả sản phẩm B" (p.highlight) có color = green
+## Giải thích chi tiết quá trình cascade + inheritance cho mỗi câu.
+**Sản phẩm A**
+Font-size = 20px
+Color = green.
+Font-size từ .card .title.
+Color đỏ từ #featured .title bị ghi đè bởi .highlight { color: green !important }
+**Mô tả sản phẩm A**
+Color = blue
+.card cho màu xanh
+p dùng inherit kế thừa màu xanh từ cha
+**Sản phẩm B**
+Font-size = 20px
+Color = blue
+Font-size từ .card .title
+Color kế thừa từ .card
+**Mô tả sản phẩm B**
+Color = green
+Ban đầu nhận blue từ .card sau đó bị .highlight { color: green !important } ghi đè hoàn toàn.
