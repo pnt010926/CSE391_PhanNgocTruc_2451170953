@@ -89,3 +89,25 @@ Template Literal
     </div>
     `;
 ```
+# Câu C1
+Lỗi 1: if (giaSauGiam = 0)
+Sửa if (giaSauGiam === 0)
+Vì "=" là gán giá trị, không phải so sánh.
+Lỗi 2: tinhGiaGiamGia("100000", 20)
+Sửa: tinhGiaGiamGia(100000, 20)
+Vì "100000" là string, nên dùng number để tính toán đúng.
+Lỗi 3: var giamGia
+Sửa: const giamGia
+Vì var dễ gây lỗi scope, nên dùng let hoặc const.
+Lỗi 4 return "Phần trăm giảm không hợp lệ"
+Sửa: return "Phần trăm giảm không hợp lệ";
+Vì lỗi ASI.
+Lỗi 5: for (var i = 0; i < 5; i++)
+Sửa: for (let i = 0; i < 5; i++)
+Vì var không có block scope nên setTimeout đều lấy i = 5, let tạo biến riêng cho từng vòng lặp.
+Lỗi 6: tinhGiaGiamGia(-10000, 20)
+Sửa 
+if(giaBan < 0){
+    return "Giá bán không hợp lệ";
+}
+Vì giá sản phẩm không thể là số âm.
