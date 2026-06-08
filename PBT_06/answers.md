@@ -60,3 +60,34 @@ Tác dung đẩy element theo Flexbox/Grid.
 .container-md
     Mobile: full width
     Từ md (≥768px) trở lên: có max-width
+
+# Câu C1
+1. Đổi màu $primary của Bootstrap sang #E63946
+Các bước cần làm:
+Bước 1 — Cài Bootstrap source + Sass
+Cần:
+Bootstrap source SCSS
+Sass compiler
+Bước 2 — Tạo file SCSS riêng 
+Bước 3 — Override biến $primary
+Trong Bootstrap, màu chính được lưu trong: $primary.
+Ta ghi đè trước khi import Bootstrap.
+Bước 4 — Compile SCSS → CSS   
+Bước 5 — Link file CSS mới
+2. Tại sao KHÔNG nên override trực tiếp?
+Chỉ đổi được 1 component
+Code trên chỉ đổi .btn-primary
+Nhưng Bootstrap còn rất nhiều class dùng $primary nên
+Màu sẽ không đồng bộ.
+Khó bảo trì.
+Dễ bị CSS conflict.
+Mất tính hệ thống của Bootstrap.
+**Vì sao nên dùng SASS variables**
+Khi đồng bộ toàn bộ hệ thống
+Chỉ cần: $primary: #E63946;
+mọi component tự cập nhật.
+Dễ maintain
+Đổi theme cực nhanh.
+Giữ nguyên cấu trúc Bootstrap
+Không phá utility classes và component states.
+Đây là cách Bootstrap chính thức khuyến nghị khi customize theme.
