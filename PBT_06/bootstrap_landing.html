@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap E-Commerce</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        .hero-img {
+            height: 600px;
+            object-fit: cover;
+        }
+        
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .product-img {
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+
+        <div class="container">
+
+            <a href="#" class="navbar-brand fw-bold">
+                MyShop
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Products</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+
+                </ul>
+
+                <form class="d-flex me-3">
+
+                    <input type="text" class="form-control me-2" placeholder="Search">
+
+                    <button class="btn btn-primary">
+                        Search
+                    </button>
+
+                </form>
+
+                <a href="#" class="text-white fs-4">
+                    <i class="bi bi-cart3"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="carousel slide" id="heroCarousel" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active position-relative">
+
+                <img src="images/banner1.jpg" class="d-block w-100 hero-img">
+
+                <div class="position-absolute top-0 start-0
+                w-100 h-100 overlay d-flex
+                flex-column justify-content-center
+                align-items-center text-white">
+
+                    <h1 class="display-3 fw-bold">
+                        Big Sale 2026
+                    </h1>
+
+                    <p class="fs-4">
+                        Up to 70% Off
+                    </p>
+
+                    <button class="btn btn-primary btn-lg">
+                        Shop Now
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="carousel-item position-relative">
+
+                <img src="images/banner2.jpg" class="d-block w-100 hero-img">
+
+                <div class="position-absolute top-0 start-0
+                w-100 h-100 overlay d-flex
+                flex-column justify-content-center
+                align-items-center text-white">
+
+                    <h1 class="display-3 fw-bold">
+                        New Collection
+                    </h1>
+
+                    <p class="fs-4">
+                        Gaming Gear
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="carousel-item position-relative">
+
+                <img src="images/banner3.jpg" class="d-block w-100 hero-img">
+
+                <div class="position-absolute top-0 start-0
+                w-100 h-100 overlay d-flex
+                flex-column justify-content-center
+                align-items-center text-white">
+
+                    <h1 class="display-3 fw-bold">
+                        Premium Products
+                    </h1>
+
+                    <p class="fs-4">
+                        Best Quality
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" data-bs-target="#heroCarousel" data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+        </button>
+
+        <button class="carousel-control-next" data-bs-target="#heroCarousel" data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+        </button>
+
+    </div>
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <h2 class="text-center mb-5">
+                Featured Products
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="card h-100">
+
+                        <div class="position-relative">
+
+                            <img src="images/product1.jpg" class="card-img-top product-img">
+
+                            <span class="badge bg-danger
+                            position-absolute top-0 end-0
+                            m-2">
+                                Sale
+                            </span>
+
+                        </div>
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h5 class="card-title">
+                                Gaming Mouse
+                            </h5>
+
+                            <p class="card-text">
+                                RGB Gaming Mouse
+                            </p>
+
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                                Xem nhanh
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="card h-100">
+
+                        <img src="images/product2.jpg" class="card-img-top product-img">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h5 class="card-title">
+                                Keyboard
+                            </h5>
+
+                            <p class="card-text">
+                                Mechanical Keyboard
+                            </p>
+
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                                Xem nhanh
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="card h-100">
+
+                        <img src="images/product3.jpg" class="card-img-top product-img">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h5 class="card-title">
+                                Headphone
+                            </h5>
+
+                            <p class="card-text">
+                                Wireless Headphone
+                            </p>
+
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                                Xem nhanh
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="card h-100">
+
+                        <img src="images/product4.jpg" class="card-img-top product-img">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h5 class="card-title">
+                                Monitor
+                            </h5>
+
+                            <p class="card-text">
+                                240Hz Gaming Monitor
+                            </p>
+
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                                Xem nhanh
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="modal fade" id="productModal">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Product Detail
+                    </h5>
+
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img src="images/product1.jpg" class="img-fluid mb-3">
+
+                    <h4>Gaming Mouse</h4>
+
+                    <p>
+                        High quality RGB gaming mouse.
+                    </p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+
+                        Close
+
+                    </button>
+
+                    <button class="btn btn-primary">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <h5>About Us</h5>
+
+                    <p>
+                        Premium gaming products.
+                    </p>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <h5>Links</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="#" class="text-white text-decoration-none">
+                                Home
+                            </a></li>
+
+                        <li><a href="#" class="text-white text-decoration-none">
+                                Shop
+                            </a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <h5>Support</h5>
+
+                    <p>
+                        support@myshop.com
+                    </p>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <h5>Contact</h5>
+
+                    <p>
+                        Hà Nội, Việt Nam
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
