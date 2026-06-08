@@ -172,3 +172,143 @@ Font size có thay đổi không?
     Font lớn nhất
     Khoảng cách và padding lớn hơn
     Card title khoảng 22px
+# Câu C2
+Mobile Layout (<768px)
+┌──────────────────────┐
+│ HEADER               │
+│ Logo   ☰             │
+├──────────────────────┤
+│ HERO IMAGE           │
+├──────────────────────┤
+│ FOOD IMAGE           │
+│ FOOD IMAGE           │
+│ FOOD IMAGE           │
+│ FOOD IMAGE           │
+│ FOOD IMAGE           │
+│ FOOD IMAGE           │
+├──────────────────────┤
+│ RESERVATION FORM     │
+│ Date                 │
+│ Time                 │
+│ Guests               │
+│ Notes                │
+│ [Book Table]         │
+├──────────────────────┤
+│ GOOGLE MAP           │
+├──────────────────────┤
+│ FOOTER               │
+└──────────────────────┘
+**Mobile phân tích:**
+Những gì bị ẩn?
+    Navigation menu ngang bị ẩn
+    Chỉ hiện hamburger ☰
+    Có thể ẩn Google Map chi tiết để giảm tải
+Form nằm đâu?
+    Form đặt bàn nằm dưới gallery ảnh món ăn
+    Hiển thị full width
+2. Tablet Layout (768px - 1023px)
+┌──────────────────────────────────┐
+│ HEADER                           │
+│ Logo        Menu        Hotline  │
+├──────────────────────────────────┤
+│ HERO IMAGE                       │
+├──────────────────────────────────┤
+│ FOOD GRID (2 COLUMNS)            │
+│ ┌────────┬────────┐              │
+│ │ Image  │ Image  │              │
+│ ├────────┼────────┤              │
+│ │ Image  │ Image  │              │
+│ ├────────┼────────┤              │
+│ │ Image  │ Image  │              │
+│ └────────┴────────┘              │
+├──────────────────────────────────┤
+│ RESERVATION FORM                 │
+├──────────────────────────────────┤
+│ GOOGLE MAP                       │
+├──────────────────────────────────┤
+│ FOOTER                           │
+└──────────────────────────────────┘
+**Tablet phân tích:**
+Grid ảnh mấy cột?
+    Grid món ăn hiển thị 2 cột
+Bản đồ nằm đâu?
+    Google Maps nằm dưới form đặt bàn
+    Full width
+3. Desktop Layout (≥1024px)
+┌────────────────────────────────────────────────────┐
+│ HEADER                                             │
+│ Logo         Navigation         Hotline            │
+├────────────────────────────────────────────────────┤
+│ HERO IMAGE                                         │
+├──────────────────────┬─────────────────────────────┤
+│ FOOD GRID            │ RESERVATION FORM            │
+│ (3 COLUMNS)          │ Date                        │
+│ ┌────┬────┬────┐     │ Time                        │
+│ │Img │Img │Img │     │ Guests                      │
+│ ├────┼────┼────┤     │ Notes                       │
+│ │Img │Img │Img │     │ [Book Table]               │
+│ └────┴────┴────┘     │                             │
+├──────────────────────┴─────────────────────────────┤
+│ GOOGLE MAP                                         │
+├────────────────────────────────────────────────────┤
+│ FOOTER                                             │
+└────────────────────────────────────────────────────┘
+**Desktop phân tích**
+Layout bao nhiêu cột?
+Main layout chia 2 cột
+    Gallery món ăn
+    Form đặt bàn
+Sidebar có không?
+    Không cần sidebar riêng
+    Form booking đóng vai trò giống sidebar
+## CSS Skeleton
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+.layout{
+    display: grid;
+
+    gap: 20px;
+}
+
+/* Mobile */
+.header,
+.hero,
+.gallery,
+.booking,
+.map,
+.footer{
+    width: 100%;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* Tablet */
+@media (min-width: 768px){
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px){
+    .main-content{
+        display: grid;
+
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+    .gallery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
